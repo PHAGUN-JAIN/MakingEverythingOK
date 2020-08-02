@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#main
+{width:100%; height:100%; background:url(../images/background-blur.jpg) top left no-repeat;}
+div#main img.background
+{width:100%; height:100%;}
+
+div#main div#button
+{width:453px; height:230px; overflow:hidden; position:absolute; top:50%; left:50%; margin-top:-115px; margin-left:-226px; background:url(../images/button.png) top left no-repeat; cursor:pointer;}
+
+div#main div#progress
+{width:453px; height:96px; overflow:hidden; position:absolute; top:50%; left:50%; margin-left:-226px; margin-top:-180px; background:url(../images/progress.png) top left no-repeat;}
+
+div#main div#progress div#bar
+{position:relative; width:453px; height:96px;}
+div#main div#progress div#bar p
+{position:absolute; top: 20px; left:0px; width:435px; text-align:center; font-family:Tahoma, sans-serif; font-size:16px;}
+div#main div#progress div#bar div#line
+{position:absolute; top:54px; left:53px; width:0px; height:10px; background:#2BCF18;}
+
+div#main div#answer
+{width:453px; height:210px; overflow:hidden; position:absolute; top:50%; left:50%; margin-left:-226px; margin-top:-145px; background: #167519; border: 10px solid #025200; border-radius:20px; font-family:Tahoma, sans-serif; box-shadow: #555 5px 5px 25px;}
+div#main div#answer h4
+{text-align:center; margin:26px 10px 20px 10px; font-size:32px; color:white}
+div#main div#answer p
+{text-align:center; margin:0px 25px; font-size:18px; line-height:1.2em; color:white}
+div#answer p.button {padding:20px 0px}
+div#answer p.button span {text-transform:uppercase; padding:5px 50px; border:0px solid #903; border-radius:15px; box-shadow:1px 1px 4px #051f00; background:rgba(255, 255, 255, 0.7); cursor:pointer; color:#189900}
+div#answer p.button span:hover {background:rgba(255, 255, 255, 1)}
+
+div#show {background:rgba(0, 0, 0, 0.7); width:100%; position:fixed; top:0px; left:0px; z-index:20}
+div#show div.panel {width:50%; background:#cacaca; position:absolute; top:25%; left:25%; border:#333 10px solid; border-radius:15px}
+div#show div.close {width:30px; height:30px; position:absolute; top:25%; right:25%; border-radius:30px; border:black 5px solid; font-size:38px; font-weight:bolder; text-align:center; line-height:30px; cursor:pointer; margin:-15px -35px 0px 0px; background:white}
+div#show div.close span {-moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); display:block}
+
+div#main div#shareBlock
+{height:20px; width:330px; position: absolute; bottom:20px; left:50%; margin-left:-165px; text-align:center; -webkit-filter:grayscale(100%)}
+div#main div#shareBlock:hover { -webkit-filter:grayscale(0%)}
+
+
+div#feedback
+{position:absolute; bottom:10px; left:40px; font-family:Tahoma, sans-serif; font-size:10px; text-align:center; width:50px; height:35px; cursor:pointer;}
+div#feedback a
+{text-decoration:none; color:#999999;}
+div#feedback a:hover
+{text-decoration:none; color:#333333;}
+div#feedback a div#logo
+{width:25px; height:25px; background:url(../images/logotype.png) right top; margin:0px auto;}
+div#feedback a:hover div#logo
+{background:url(../images/logotype.png) left top;}
+
+div#d
+{position:absolute; bottom:10px; right:40px; text-align:center; width:200px; overflow:hidden;}
+div#d p {color:gray; font-size:10px; font-family:Verdana, sans-serif; margin-bottom:6px; white-space:nowrap}
+div#d p.names {margin-left:0}
+
+/*PNG fix*/
+img, div { behavior: url(../iepngfix.htc) }
+
+.myblock {width:200px; height:200px; margin:10px auto}
+
+@media(min-width: 490px) { .myblock { width: 240px; height: 400px; } }
+@media(min-width: 600px) { .myblock { width: 336px; height: 280px; } }
+@media(min-width: 1000px) { .myblock { width: 468px; height: 60px; } }
+@media(min-width: 1500px) { .myblock { width: 728px; height: 90px; } }
+
+
+@media(max-width: 900px) {div#feedback {display:none} div#main div#shareBlock {left:40px; margin:0px}}
+@media(max-width: 640px) {div#feedback,div#d {display:none} div#main div#shareBlock {left:50%; margin-left:-160px}}
+@media(max-height: 550px) {div.panel {margin-top:-50px} div#show div.close{margin-top:-65px}}
+@media(max-height: 320px) {.myblock {width:200px; height:200px; margin:10px auto} div#main div#progress {margin-top:-130px}}
